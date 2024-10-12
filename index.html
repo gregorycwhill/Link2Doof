@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link2Doof: Discover Psytrance</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f4f8;
+        }
+        header {
+            background-color: #0077b5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 40px;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            color: #fff; /* Change color of arrows to white */
+            font-size: 2rem; /* Increase font size for better visibility */
+            width: 5%; /* Set width to prevent overlap */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Add background to the arrow icons */
+            border-radius: 50%; /* Make the background circular */
+        }
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #0077b5;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #005f8d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Link2Doof</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#recommendation-section">Recommendations</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Discover Psytrance Music Tailored for You</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <section id="input-section" class="text-center mb-5">
+            <h2>Input Your OpenAI API Key</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter OpenAI API Key" aria-label="API Key" aria-describedby="apiKeyIcon">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="apiKeyIcon"><i class="fas fa-key"></i></span>
+                </div>
+            </div>
+            <h2>Input Your LinkedIn Profile</h2>
+            <textarea id="profile-input" rows="5" class="form-control" placeholder="Paste your LinkedIn profile here..."></textarea>
+            <h3 class="mt-4">Select Your Myers-Briggs Personality Type</h3>
+            <select id="mbti-dropdown" class="form-control mb-3">
+                <option value="">Select Your Type</option>
+                <option value="INTJ">INTJ - The Architect</option>
+                <option value="INTP">INTP - The Logician</option>
+                <option value="ENTJ">ENTJ - The Commander</option>
+                <option value="ENTP">ENTP - The Debater</option>
+                <option value="INFJ">INFJ - The Advocate</option>
+                <option value="INFP">INFP - The Mediator</option>
+                <option value="ENFJ">ENFJ - The Protagonist</option>
+                <option value="ENFP">ENFP - The Campaigner</option>
+                <option value="ISTJ">ISTJ - The Logistician</option>
+                <option value="ISFJ">ISFJ - The Defender</option>
+                <option value="ESTJ">ESTJ - The Executive</option>
+                <option value="ESFJ">ESFJ - The Consul</option>
+                <option value="ISTP">ISTP - The Virtuoso</option>
+                <option value="ISFP">ISFP - The Adventurer</option>
+                <option value="ESTP">ESTP - The Entrepreneur</option>
+                <option value="ESFP">ESFP - The Entertainer</option>
+            </select>
+            <button id="find-tunes-btn" class="btn btn-primary"><i class="fas fa-music"></i> Find my Tunes</button>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendation-section" class="text-center">
+            <div id="description" class="mt-3" style="display: none;">
+                <p>Your tailored recommendations based on your profile will appear below!</p>
+            </div>
+
+            <!-- Accordion for Music Results -->
+            <div class="accordion" id="musicAccordion" style="display: none;">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Your Music Samples
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#musicAccordion">
+                        <div class="card-body">
+                            <!-- Music Carousel -->
+                            <div id="musicCarousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h5 class="card-title">Track 1 Title</h5>
+                                        <audio controls>
+                                            <source src="URL_TO_TRACK_1.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="card-title">Track 2 Title</h5>
+                                        <audio controls>
+                                            <source src="URL_TO_TRACK_2.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="card-title">Track 3 Title</h5>
+                                        <audio controls>
+                                            <source src="URL_TO_TRACK_3.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="card-title">Track 4 Title</h5>
+                                        <audio controls>
+                                            <source src="URL_TO_TRACK_4.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h5 class="card-title">Track 5 Title</h5>
+                                        <audio controls>
+                                            <source src="URL_TO_TRACK_5.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#musicCarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#musicCarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by OpenAI</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('find-tunes-btn').addEventListener('click', function() {
+            // Simulate fetching recommendations and showing the results
+            document.getElementById('description').style.display = 'block';
+            document.getElementById('musicAccordion').style.display = 'block';
+            document.getElementById('collapseOne').classList.add('show'); // Open the accordion
+        });
+    </script>
+</body>
+</html>
