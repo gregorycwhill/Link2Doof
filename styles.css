@@ -13,9 +13,31 @@ footer {
     margin-top: 40px;
     background-color: #343a40;
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    border-top: 1px solid #0077b5;
 }
+
+footer p {
+    display: inline-block; /* Ensure content stays on one line */
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00d1b2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.pink-heart {
+    color: #ff69b4; /* Pink color for the heart */
+}
+
+
 .api-key-section {
     margin-left: auto; /* Align to the right */
 }
@@ -27,18 +49,16 @@ footer {
     width: 150px; /* Set width for the input field */
 }
 .banner {
-    height: 300px; /* Set height for the banner image */
-    background-image: url('banner.png'); /* Update with banner image URL */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    height: 500px; /* Fixed height for the banner */
+    background-image: url('banner.png'); /* Make sure the image URL is correct */
+    background-size: contain; /* Ensure the whole image is visible */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    /*background-color: #0077b5; /* Optional: Background color as fallback */ 
+	border-radius: 6px; /* Optional: Rounding the corners */
+    margin-bottom: 10px; /* Spacing below the banner */
 }
+
 .divider {
     border-top: 2px solid #0077b5;
     margin: 30px 0;
@@ -50,18 +70,20 @@ footer {
 .btn-primary:hover {
     background-color: #005f8d;
 }
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
 .carousel-item {
+	background-color: #e9f7f9;
     text-align: center;
 }
-.card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
+
 .carousel-control-prev,
 .carousel-control-next {
-    color: #fff; /* Change color of arrows to white */
+    color: white; /* Change color of arrows to blue */
     font-size: 6rem; /* Increase font size for better visibility */
     position: absolute;
     top: 50%; /* Position closer to the center */
@@ -70,8 +92,8 @@ footer {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.7); /* Add background to the arrow icons */
-    border-radius: 50%; /* Make the background circular */
+    background-color: #0077b5; /* Add background to the arrow icons */
+    border-radius: 80%; /* Make the background circular */
 }
 
 .carousel-control-prev {
@@ -105,7 +127,7 @@ select#mbti-dropdown {
 .summary-section {
     padding: 20px;
     background-color: #f5f5f5;
-    border-left: 5px solid #0077b5;
+    /*border-left: 5px solid #0077b5;*/
     border-radius: 5px;
     margin-top: 20px;
     display: none; /* Hide initially */
@@ -131,4 +153,26 @@ select#mbti-dropdown {
 .spinner-border {
     width: 3rem; /* Adjust the size of the spinner */
     height: 3rem; /* Adjust the size of the spinner */
+}
+.tooltip-inner {
+    max-width: 400px !important; /* Adjust the tooltip width */
+    background-color: #0077b5; /* Background color */
+    color: light-gray; /* Text color */
+    font-size: 0.9rem; /* Adjust font size */
+	line-height: 200%;
+}
+
+.tooltip .fas {
+    margin-left: 5px; /* Add space between the word and the right-aligned icon */
+    color: #00d1b2; /* Optional: Icon color */
+}
+
+.tooltip .separator {
+    margin: 0 15px; /* Add spacing for the vertical separator */
+}
+
+.info-icon {
+    cursor: pointer;
+    color: #0077b5;
+    font-size: 1.2rem; /* Size of the info icon */
 }

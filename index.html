@@ -29,7 +29,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#recommendation-section">Recommendations</a>
+                    <a class="nav-link" href="#introduction-section">Recommendations</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
 
     <!-- Header -->
     <header>
-        <h1>Discover Psytrance Music Tailored for You</h1>
+        <h1>Psytrance Guide for Corporate Types</h1>
     </header>
     
     <!-- Banner Image Placeholder -->
@@ -47,19 +47,39 @@
     <!-- Main Content -->
     <main class="container mt-5">
         <section id="input-section" class="text-center mb-5">
-            <h2>Input Your <a href="https://www.linkedin.com/public-profile/settings"  target="_blank" rel="noopener noreferrer">LinkedIn</a> Profile</h2>
+            <h2>Your <a href="https://www.linkedin.com/public-profile/settings"  target="_blank" rel="noopener noreferrer">LinkedIn</a> Profile</h2>
             <textarea id="profile-input" rows="5" class="form-control" placeholder="Paste your LinkedIn profile here..."></textarea>
             
             <!-- Myers-Briggs Selection with Tooltip -->
-            <h3 class="mt-4">Select Your Myers-Briggs Personality Type 
-                <i class="fas fa-question-circle info-icon" data-toggle="tooltip" data-placement="top" 
-                   title="The four elements of Myers-Briggs Personality type are: 
-                   1) Introversion (I) vs Extroversion (E), 
-                   2) Sensing (S) vs Intuition (N), 
-                   3) Thinking (T) vs Feeling (F), 
-                   4) Judging (J) vs Perceiving (P)">
-                </i>
-            </h3>
+			<h3 class="mt-4">Your Myers-Briggs Personality Type 
+				<i class="fas fa-question-circle info-icon" data-toggle="tooltip" data-html="true" data-placement="top"
+				   title="
+					<div style='display: flex; align-items: center; justify-content: space-between;'>
+						<span><i class='fas fa-user'></i> Introversion (I)</span>
+						<span style='margin: 0 15px;'>|</span> <!-- Vertical separator -->
+						<span style='text-align: right;'>Extroversion (E) <i class='fas fa-user-friends'></i></span>
+					</div>
+					<div style='display: flex; align-items: center; justify-content: space-between;'>
+						<span><i class='fas fa-eye'></i> Sensing (S)</span>
+						<span style='margin: 0 15px;'>|</span> <!-- Vertical separator -->
+						<span style='text-align: right;'>Intuition (N) <i class='fas fa-lightbulb'></i></span>
+					</div>
+					<div style='display: flex; align-items: center; justify-content: space-between;'>
+						<span><i class='fas fa-brain'></i> Thinking (T)</span>
+						<span style='margin: 0 15px;'>|</span> <!-- Vertical separator -->
+						<span style='text-align: right;'>Feeling (F) <i class='fas fa-heart'></i></span>
+					</div>
+					<div style='display: flex; align-items: center; justify-content: space-between;'>
+						<span><i class='fas fa-gavel'></i> Judging (J)</span>
+						<span style='margin: 0 15px;'>|</span> <!-- Vertical separator -->
+						<span style='text-align: right;'>Perceiving (P) <i class='fas fa-random'></i></span>
+					</div>">
+				</i>
+			</h3>
+
+
+
+	
             <select id="mbti-dropdown" class="form-control mb-3">
                 <option value="">Select Your Type</option>
                 <option value="INTJ">INTJ - The Architect</option>
@@ -79,7 +99,7 @@
                 <option value="ESTP">ESTP - The Entrepreneur</option>
                 <option value="ESFP">ESFP - The Entertainer</option>
             </select>
-            <button id="find-tunes-btn" class="btn btn-primary"><i class="fas fa-music"></i> Find my Tunes</button>
+            <button id="find-tunes-btn" class="btn btn-primary"><i class="fas fa-music"></i>&nbsp;Find my Tunes&nbsp;<i class="fas fa-music"></i></button>
         </section>
 
         <div class="divider"></div>
@@ -102,41 +122,42 @@
                 </div>
                 
                 <div class="summary-section">
-				</div>
+				</div>        
+				<div class="divider"></div>
 				<div class="music-porfolio">
-                    <h5>Your Music Portfolio</h5>
+                    <h4>Your Pystrance Portfolio</h4>
                     <div id="musicCarousel" class="carousel slide" data-ride="carousel" style="display: visible;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <h5 class="card-title">Bitkit &mdash; Meteorite (Original Mix)</h5>
+                                <h6 class="card-title">Bitkit &mdash; Meteorite (Original Mix)</h5>
                                 <audio controls>
                                     <source src="https://psytranceguide.com/audio/meteorite.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="carousel-item">
-                                <h5 class="card-title">Porat &mdash; Undipresia (Original Mix)</h5>
+                                <h6 class="card-title">Porat &mdash; Undipresia (Original Mix)</h5>
                                 <audio controls>
                                     <source src="https://psytranceguide.com/audio/undipresia.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="carousel-item">
-                                <h5 class="card-title">  Ticon &mdash; You Can Have My Fraggies (Original Mix)</h5>
+                                <h6 class="card-title">  Ticon &mdash; You Can Have My Fraggies (Original Mix)</h5>
                                 <audio controls>
                                     <source src="https://psytranceguide.com/audio/you-can-have-my-fraggies.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="carousel-item">
-                                <h5 class="card-title">Vibrasphere &mdash; Morning Breeze (Original Mix)</h5>
+                                <h6 class="card-title">Vibrasphere &mdash; Morning Breeze (Original Mix)</h5>
                                 <audio controls>
                                     <source src="https://psytranceguide.com/audio/morning-breeze.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="carousel-item">
-                                <h5 class="card-title">Daniel Lesden &mdash; Technological Singularity (Original Mix)</h5>
+                                <h6 class="card-title">Daniel Lesden &mdash; Technological Singularity (Original Mix)</h5>
                                 <audio controls>
                                     <source src="https://psytranceguide.com/audio/technological-singularity.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
@@ -157,10 +178,16 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>Powered by OpenAI</p>
-    </footer>
+	<!-- Footer -->
+	<footer class="text-center mt-4">
+		<p>
+			Powered by <a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a> | 
+			Shout out to <a href="https://psytranceguide.com/" target="_blank" rel="noopener noreferrer">Psytrance Guide</a> | 
+			Made with <i class="fas fa-heart pink-heart"></i> in Brunswick, Australia
+		</p>
+	</footer>
+
+
 	<!-- Spinner Modal -->
 	<div class="modal fade" id="spinnerModal" tabindex="-1" role="dialog" aria-labelledby="spinnerModalLabel" aria-hidden="true">
 		<div class="modal-dialog d-flex justify-content-center align-items-center" role="document">
@@ -169,7 +196,7 @@
 					<div class="spinner-border" role="status">
 						<span class="sr-only">Loading...</span>
 					</div>
-					<p>Loading your recommendations...</p>
+					<div id="loading-text" class="mt-3">Analysing your profile ...</div>
 				</div>
 			</div>
 		</div>
