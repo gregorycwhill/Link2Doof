@@ -102,6 +102,7 @@ function updateContent(content) {
 
     // Update Summary
     document.querySelector('.summary-section').innerHTML = `<h4>Summary</h4><p>${parsedContent.summary}</p>`;
+	
 }
 
 // Automatically populate API key from URL
@@ -141,6 +142,12 @@ document.getElementById('find-tunes-btn').addEventListener('click', async functi
     document.getElementById('recommendationAccordion').style.display = 'block';
     document.querySelector('.summary-section').style.display = 'block';
     document.getElementById('musicCarousel').style.display = 'block'; // Show carousel
+	
+	// Scroll to the Recommendations section
+    document.getElementById('introduction-section').scrollIntoView({
+        behavior: 'smooth' // Optional: Smooth scroll effect
+    });
+
 });
 
 // Stop auto-scroll when any track is playing
